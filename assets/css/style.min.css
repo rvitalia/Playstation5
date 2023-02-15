@@ -624,7 +624,8 @@ html, body {
   position: absolute;
   bottom: -62rem;
   left: -63.5rem;
-  z-index: -1;
+  z-index: -2;
+  pointer-events: none;
 }
 
 .games {
