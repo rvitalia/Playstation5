@@ -542,7 +542,7 @@ html, body {
 .container__swiper {
     position: relative;
     width: 100%;
-    max-width: 124.6rem;
+    max-width: 124.8rem;
     margin: 0 auto;
 }
 
@@ -553,7 +553,7 @@ html, body {
     -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100%;
-    background: linear-gradient(324.43deg, #131313 41.97%, rgba(11, 28, 63, 0.51) 100.3%);
+    background-color: #1E1E1E;
 }
 
 .header {
@@ -711,6 +711,13 @@ html, body {
     z-index: 0;
 }
 
+.games {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.4s linear;
+}
+
 .games__inner__title {
     display: block;
     margin: 3.6rem 0;
@@ -746,7 +753,7 @@ html, body {
     text-align: right;
     letter-spacing: -0.04em;
     color: #fff;
-    margin-bottom: 12.2rem;
+    margin-bottom: 4.63rem;
 }
 
 .games__inner__attribute {
@@ -755,7 +762,7 @@ html, body {
     -webkit-column-gap: 0.8rem;
     -moz-column-gap: 0.8rem;
     column-gap: 0.8rem;
-    margin-top: 22.583rem;
+    margin-top: 14.991rem;
     margin-bottom: 11.569rem;
 }
 
@@ -803,13 +810,13 @@ html, body {
     right: -10.7rem;
 }
 
-.custom-next > img {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
 .custom-prev {
     left: -9.4rem;
+}
+
+.custom-prev-image {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .custom-prev,
@@ -828,12 +835,36 @@ html, body {
     transition: all 0.4s linear;
 }
 
+.custom-prev-image,
+.custom-next-image {
+    -o-object-fit: none;
+    object-fit: none;
+    opacity: 0.3;
+    transition: all 0.4s linear;
+}
+
+.custom-prev-image:hover,
+.custom-next-image:hover {
+    opacity: 1;
+}
+
+.swiper-slide {
+    transition: all 0.4s linear;
+}
+
+.swiper-slide-next, .swiper-slide-prev {
+    transition: all 0.4s linear;
+    -webkit-transform: scale(0.67) !important;
+    transform: scale(0.67) !important;
+}
+
 .swiper-slide__container {
-    width: 47rem;
-    height: 30.947rem;
+    width: 70.15rem !important;
+    height: 46.206rem !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border: 2px solid #fff;
     border-radius: 3.2rem;
     color: #fff;
     transition: all 0.4s linear;
@@ -848,30 +879,31 @@ html, body {
 }
 
 .swiper-slide__container--third {
-    background-image: url(../images/games/Group15.png);
+    background-image: url(../images/games/maxresdefault.png);
 }
 
 .swiper-slide__logo {
     width: 68px;
     height: 52.86px;
-    padding: 1.4rem 1.6rem;
-    margin-bottom: 16.57rem;
+    margin: 1rem 0 28.57rem 1.2rem;
 }
 
-.swiper-slide__logo.active {
-    margin-bottom: 2.4rem;
+.swiper-slide-active .swiper-slide__logo {
+    margin: 1rem 0 2.4rem 1.2rem;
 }
 
 .swiper-slide__title {
     display: none;
+    max-width: 52.277rem;
     font-family: "Inter";
     font-weight: 700;
     font-size: 6.4rem;
     line-height: 77px;
     margin-bottom: 3.156rem;
+    margin-left: 1.953rem;
 }
 
-.swiper-slide__title.active {
+.swiper-slide-active .swiper-slide__title {
     display: block;
 }
 
@@ -884,10 +916,10 @@ html, body {
     font-size: 20px;
     line-height: 39px;
     letter-spacing: -0.04em;
-    margin-left: 2rem;
+    margin-left: 1.953rem;
 }
 
-.swiper-slide__text.active {
+.swiper-slide-active .swiper-slide__text {
     font-size: 32px;
     width: 487.71px;
 }
@@ -895,6 +927,8 @@ html, body {
 .swiper-slide__button {
     display: none;
     padding: 18px 36px;
+    margin-left: 1.953rem;
+    max-width: 17.4rem;
     border: 2px solid #117CFF;
     box-shadow: inset 5px 9px 9px rgba(0, 0, 0, 0.25);
     -webkit-filter: drop-shadow(0px 0px 17px #117CFF);
@@ -908,7 +942,7 @@ html, body {
     color: #117CFF;
 }
 
-.swiper-slide__button.active {
+.swiper-slide-active .swiper-slide__button {
     display: block;
 }
 
@@ -1063,6 +1097,7 @@ html, body {
     -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 4.2rem;
+    border: none;
     font-family: "Inter";
     font-weight: 700;
     font-size: 48px;
