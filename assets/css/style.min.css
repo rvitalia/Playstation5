@@ -580,6 +580,8 @@ html, body {
   padding: 1.9rem 3.7rem;
   margin-right: 5.4rem;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
   transition: all 0.4s linear;
 }
 .hero__inner__text__submit:hover {
@@ -599,6 +601,8 @@ html, body {
   background-color: transparent;
   cursor: pointer;
   transition: all 0.4s linear;
+  position: relative;
+  z-index: 1;
 }
 .hero__inner__text__more:hover {
   transform: scale(1.05);
