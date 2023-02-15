@@ -706,8 +706,8 @@ html, body {
 
 .hero__image {
     position: absolute;
-    bottom: -60rem;
-    left: 0;
+    bottom: -62rem;
+    left: -63.5rem;
     z-index: 0;
 }
 
